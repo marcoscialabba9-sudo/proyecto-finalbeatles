@@ -1,41 +1,40 @@
-*{
+*{     
     margin:0;
     padding:0;
-    box-sizing:border-box;
+    /*use este margin y padding 0 para que no haya ningun espacio en todas las paginas y tener ocupado todo*/ 
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#111;
-    color:white;
+    font-family:Arial, sans-serif; 
+    color:aliceblue
+    /*aca en el body solo le cambie la letra y el color de la letra en todas las paginas*/
 }
-
 .head{
-    height: 350px;
+    background-color: #222;
+    height: 350px; 
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    justify-content: center; 
     text-align:center;
+    /*aca este header es un elemento flex y la etiqueta padre es header con la clase "head" use una altura de 350px porque es
+    como quedaba mejor esteticamente, es flex porque tiene elementos dentro como h1 y p que queria centrar, ademas
+    de ponerlo el texto en columna con flex direction:column;*/           
 }
-
-.head h1{
-    font-size:4em;
-}
-
-.head p{
-    font-size:1.2em;
-    margin-top:10px;
-}
-/*Nav*/
+/*Nav*/ 
+/*El nav crea la barra de navegación de la página. le puse un fondo negro con background color  
+y el espacio interno padding para que se vea mas el menu
+en el nave esta la lista ul y eliminw las viñetas con list-style: none, por el  display: flex, 
+los enlaces estan en una fila. justify-content: center los centra y gap deja un espacio entre los elementos
+Los enlaces a tienen un color gris, texto en negrita y no están subrayados 
+y cuando pasa el mouse sobre las opciones cambian a un color gris con texto negro y bordes redondos por el hover.*/
 nav{
     background-color: #000;
     padding: 2em;
 }
 
 nav ul{
-    list-style: none; /*saca las viñetas*/
     display: flex;
+    list-style: none; /*saca las viñetas*/
     justify-content: center;
     gap: 4em;
     padding: 6px;
@@ -59,45 +58,48 @@ color: #000;
 }
 /*menu*/
 .historia{
-    max-width:1000px;
-    margin:auto;
-    padding:60px 20px;
-    text-align:center;
+    max-width:1000px; /*ocupa todo el ancho de la pantalla*/
+    margin:auto;  /*es automatico para que todo se centre solo horizontalmente en la seccion*/
+    padding:60px; /*este padding es el espacio interior del texto*/
+    text-align:center; /*me centra todo el texto*/
 }
+/*esta clase es de la imagen del menu que esta en el centro*/
 .imagen{
     display: flex;
     justify-content: center;
     align-items: center;
+    /*use esto para que la imagen quede centrada*/
 }
 
 .datos{
-    padding:60px 20px;
+    padding:60px; /*este padding es el espacio interior del texto*/
 }
 
 .datos h2{
-    text-align:center;
-    margin-bottom:30px;
+    text-align:center; /*centra el subtitulo*/ 
 }
-/*Menu*/
+
 .caja{
     display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    color: aliceblue;
+    justify-content:center; /*me centra las cajitas*/
+    gap:20px; /*me separa las cajas*/
+    color: aliceblue; /*color de la letra*/
+    /*este es el padre de las cajitas*/
 }
 
 .cajita{
-    background:#222;
+    background:#222; /*color de fondo*/
     padding:25px;
-    width:250px;
-    border-radius:15px;
-    text-align:center;
+    width:250px; /*ancho de la cajita*/
+    border-radius:15px; /*para que el borde quede redondeado*/
+    text-align:center; /*me centra el texto*/
 }
 main{
 background-color: aliceblue;
 color: #222;
+/*colores del menu*/
 }
+
 /*footer*/
 footer{
     background:#000;
@@ -110,13 +112,19 @@ footer ul{
     flex-direction: row;
     list-style: none;
 }
+/*en el footer le puse un color de fondo negro, centre el texto con text align y el espacio entre estos es de 20px
+la lista ul es flex para que quede centrada, en forma de fila y con list-style saque las viñetas*/
+
 /*Antologia*/
+/*aca el articulo es la clase para todas las etiquetas*/
 .articulo{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+/*aca lo que hizo el articulo fue que me ponga todo en modo de columnas, con un espacio para separar y 
+todo los items centrados*/
 .p{
     display: flex;
     text-align: center;
@@ -127,50 +135,73 @@ footer ul{
     padding: 2.5px;
     line-height: 50px;
 }
+/*use la misma clase para todas las p, es flex pq centre todo, lo organize en modo de columnas, la letra tiene un tamaño de 2em
+para que quede acorde a las imagenes, un padding para que no me quede todo junto
+y un line height para dejar un espacio entre lineas*/
+
 .spann{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
 }
+/*este spann es un separador de texto del h1, pq quise centrarlo todo y poner un tamaño de letra distinto*/
 h2{
     display: flex;
     justify-content:center;
     align-items: center;
 }
+
 h3{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/*en h2 y h3 centre todo el texto*/
 h3 a{
 color: #000;
 font-size: 50px;
+/*el h3 tiene un enlace a otra pagina, le puse color negro y agrande un poco la letra*/
 }
 .año{
     color: green;
     font-size: 100px;
     font-family: fantasy;
+    /*aca en el titulo de los textos cambie el color de la letra, lo puse en negrita, 
+    agrande la letra y la cambie a fantasy*/
 }
 .ham{
     font-size: 50px;
     padding: 50px;
 }
+/*en este que seria hamburgo agrande la letra y un padding para separar esto del año*/
+
 /*Albums*/
+.añ{
+    color: #222;
+}
 .albums{
     display: flex;
     justify-content: center;
+    /*aca use la misma clase para todas las imagenes dentro d una caja cda una
+    y las centre todas*/
 }
 .sec{
+    /*aca en la seccion puse esta clase para hacerla flex, use wrap para que se ajusten en varias lineas y los centre*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 /*Videos*/
+.aqw{
+    color: #222;
+}
 .vid{
  display: flex;
  justify-content: center;   
 }
+
 .se{
 background-color: #222;
 display: flex;
@@ -178,18 +209,24 @@ flex-wrap: wrap;
 justify-content: center;
 gap: 10px;
 }
+/*aca hice lo mismo que los albums pero agrege un color de fondo y un gap para separarlos*/
 .titulo{
     display: flex;
     text-align: center;
     justify-content: center;
+    /*esta clase es el titulo de cada imagen que los centre*/
 }
+
 .aa{
     text-decoration: none;
     color: aliceblue;
     border:2px solid aliceblue;
     border-radius: 20px;
     padding: 15px;
+    /*esta clase es de los enlaces, que saque la linea de abajo con text decoration none, cambie el color de la letra
+    ademas de agregarle bordes redondeados*/
 }
+
 /*Contacto*/
 .Contacto{
     display: flex;
@@ -200,30 +237,33 @@ gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    /*en este span centre el h2*/
 }
 .form{
     background-color:#222;
     padding: 50px;
-    width: 1000px;
+    width: 200em;
+    /*aca al formulario le puse un ancho que ocupe toda la pantalla y un padding asi no quedaba pegado  alas paredes
+    y un color de fondo*/
  }
 .sele{
     padding: 10px;
     border: 2px solid aliceblue;
     border-radius: 10px;
-    padding: 10px; 
-
+/*aca a la eleccion de localidad le puse bordes redondeados, y otro padding
+lo mismo que la clase em que es el correo*/
 }
 .em{
     padding: 10px;
     border: 2px solid aliceblue;
     border-radius: 10px;
-    padding: 10px; 
 }
 .ulti{
     background-color: #222;
     border: 2px solid aliceblue;
     border-radius: 10px;
     padding: 10px;
+    /*este seria tddo el titulo que lo centre, agregue padding, bordes redondeados y color de fndo*/
 }
 .logoo{
     display: flex;
@@ -233,14 +273,10 @@ gap: 10px;
     border: 2px solid aliceblue;
     border-radius: 10px;
 }
+/*este es el logo que puse en contactos que lo centre gracias a que es flex, agrege color de fondo y puse un borde redondeado*/
+
 .aqui{
+    text-decoration: none;
     color: aliceblue;
 }
-.form-entrada{
-    display: flex;
-    font-weight: 100;
-    margin: 6px;
-    width: 100%;
-    background-color: aliceblue;
-    font-size: large;
-}
+/*en este enlace saque la linea de abajo y cambie el color*/
